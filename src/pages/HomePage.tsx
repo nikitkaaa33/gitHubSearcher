@@ -46,10 +46,15 @@ const HomePage = () => {
 						{data?.map((user) => (
 							<li
 								key={user.id}
-								className="py-2 px-4 hover:bg-gray-500
-						hover:text-white cursor-pointer"
+								className="flex flex-row py-2 px-4 hover:bg-gray-500
+						hover:text-white cursor-pointer border"
 								onClick={() => clickHandler(user.login)}
 							>
+								<img
+									className="w-[25px] mr-2"
+									src={user.avatar_url}
+									alt=""
+								/>
 								{user.login}
 							</li>
 						))}
